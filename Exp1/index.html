@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CSS Types</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ================= BODY DESIGN ================= */
+
+body{
+
+    margin:0;
+
+    font-family:'Segoe UI', Arial, sans-serif;
+
+    /* Add your background image here */
+    background-image:url("COLLEGE.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+}
+
+
+/* Dark red overlay */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(120,0,0,0.45);
+
+    z-index:-1;
+
+}
+
+
+/* ================= FORM CARD ================= */
+
+
+.container{
+
+    width:420px;
+
+    margin:70px auto;
+
+    background:rgba(255,255,255,0.95);
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+
+    border-top:8px solid #b71c1c;
+
+}
+
+
+/* College Heading */
+
+h1{
+
+    text-align:center;
+
+    color:#b71c1c;
+
+    font-size:28px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* Labels */
+
+label{
+
+    font-weight:600;
+
+    color:#7f0000;
+
+    font-size:16px;
+
+}
+
+
+/* Input Fields */
+
+
+input{
+
+    width:100%;
+
+    padding:13px;
+
+    margin-top:8px;
+
+    margin-bottom:20px;
+
+    border:2px solid #e0a0a0;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+    transition:0.3s;
+
+}
+
+
+input:focus{
+
+    outline:none;
+
+    border-color:#b71c1c;
+
+    box-shadow:0 0 8px rgba(183,28,28,0.4);
+
+}
+
+
+/* Button */
+
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:linear-gradient(45deg,#b71c1c,#f44336);
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.04);
+
+    background:linear-gradient(45deg,#7f0000,#d32f2f);
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<script>
+
+function give_information(){
+
+
+let name = document.getElementById("name").value;
+
+let prn = document.getElementById("prn").value;
+
+
+if(prn=="" || name==""){
+
+alert("Please enter Name and PRN.");
+
+return;
+
+}
+
+
+
+let newWindow=window.open("");
+
+
+
+newWindow.document.write(`
+
+
+<html>
+
+
+<head>
+
+
+<title>Student Document</title>
+
+
+<style>
+
+
+body{
+
+background:#fff0f0;
+
+font-family:'Segoe UI',Arial;
+
+padding:40px;
+
+}
+.profile1{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #b71c1c;
+    position:absolute;
+    top:30px;
+    left:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.profile2{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #b71c1c;
+    position:absolute;
+    top:30px;
+    right:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.paper{
+    width:750px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px gray;
+    border-top:8px solid #b71c1c;
+
+    /* Add these two lines */
+    position:relative;
+    padding-top:140px;
+}
+
+
+
+h1{
+
+text-align:center;
+
+color:#b71c1c;
+
+}
+
+
+
+h3{
+
+color:#c62828;
+
+border-bottom:2px solid #ffcdd2;
+
+padding-bottom:5px;
+
+}
+
+
+
+p{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+
+
+table,th,td{
+
+border:1px solid #999;
+
+}
+
+
+
+th{
+
+background:#b71c1c;
+
+color:white;
+
+}
+
+
+
+th,td{
+
+padding:12px;
+
+font-size:17px;
+
+}
+
+
+
+.footer{
+
+text-align:center;
+
+margin-top:40px;
+
+color:#777;
+
+font-style:italic;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="paper">
+<img src="ME.jpg" class="profile1" alt="Student Photo">
+<img src="Doraemon.jpg" class="profile2" alt="Doraemon Photo">
+<h1>
+
+Symbiosis Institute of Technology
+
+</h1>
+
+
+
+<h3>Student Information</h3>
+
+
+<table>
+
+
+<tr>
+
+<th>Name</th>
+
+<td>${name}</td>
+
+</tr>
+
+
+
+<tr>
+
+<th>PRN Number</th>
+
+<td>${prn}</td>
+
+</tr>
+
+
+</table>
+
+
+
+
+<h3>About Me</h3>
+
+<p>
+Hello! My name is <b>${name}</b>, and I am a Third Year B.Tech student at
+Symbiosis Institute of Technology. I am passionate about technology and
+continuously learning new concepts in web development and programming.
+</p>
+
+<p>
+This webpage has been created as part of my Web Technology assignment to
+demonstrate the use of HTML, CSS, and JavaScript. It showcases basic web
+design, form handling, and dynamic content generation using JavaScript.
+</p>
+
+<p>
+I enjoy exploring new technologies, improving my coding skills, and building
+simple yet attractive web applications as part of my academic learning.
+</p>
+
+
+
+<h3>Skills</h3>
+
+<ul>
+    <li>HTML5 & Basic Web Page Development</li>
+    <li>CSS3 (Internal & External Styling)</li>
+    <li>Basic JavaScript Programming</li>
+    <li>C Programming</li>
+    <li>Python Programming (Beginner)</li>
+    <li>Problem Solving & Logical Thinking</li>
+    <li>Microsoft Word, PowerPoint & Excel</li>
+</ul>
+
+<h3>Academic Information</h3>
+
+<table>
+<tr>
+    <th>Course</th>
+    <td>B.Tech</td>
+</tr>
+
+<tr>
+    <th>Year</th>
+    <td>Third Year</td>
+</tr>
+
+<tr>
+    <th>Institute</th>
+    <td>Symbiosis Institute of Technology</td>
+</tr>
+
+<tr>
+    <th>Department</th>
+    <td>Computer Science & Engineering</td>
+</tr>
+
+<tr>
+    <th>Area of Interest</th>
+    <td>Web Development, Programming & AI</td>
+</tr>
+</table>
+
+
+<div class="footer">
+
+Thank You<br>
+
+Symbiosis Institute of Technology
+
+</div>
+
+
+
+</div>
+
+
+
+</body>
+
+
+</html>
+
+
+`);
+
+
+
+newWindow.document.close();
+
+
+}
+
+
+</script>
+
+
+
+<div class="container">
+
+
+<h1>
+
+Symbiosis Institute of Technology
+
+</h1>
+
+
+
+<label>
+
+Student Name
+
+</label>
+
+
+<input type="text" id="name" placeholder="Enter your name">
+
+
+
+<label>
+
+PRN Number
+
+</label>
+
+
+<input type="text" id="prn" placeholder="Enter PRN">
+
+
+
+<button onclick="give_information()">
+
+Submit
+
+</button>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

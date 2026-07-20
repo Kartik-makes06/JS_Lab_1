@@ -1,0 +1,71 @@
+/* External CSS File */
+
+
+/* Page Background */
+body{
+    background:#fff0f0;
+}
+
+
+/* Form Card Enhancement */
+.container{
+
+    border-top:8px solid #b71c1c;
+
+    transition:0.3s;
+
+}
+
+
+/* Card Hover Effect */
+.container:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(183,28,28,0.35);
+
+}
+
+
+
+/* Button Animation */
+
+button{
+
+    transition:0.3s ease;
+
+}
+
+
+
+/* Button Hover */
+
+button:hover{
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* Input Focus Effect */
+
+input:focus{
+
+    outline:none;
+
+    border:2px solid #b71c1c;
+
+    box-shadow:0 0 8px rgba(183,28,28,0.4);
+
+}
+
+
+
+/* Smooth appearance */
+
+input, button{
+
+    transition:all 0.3s ease;
+
+}
